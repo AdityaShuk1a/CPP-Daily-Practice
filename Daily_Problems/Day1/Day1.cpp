@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// First problem
+//First problem
 
 int main (){
     string a,b;
