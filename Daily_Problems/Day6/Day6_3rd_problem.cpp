@@ -1,14 +1,13 @@
 /*
-
-Ques-02 Write a C++ program that takes an array as input and prints the number of odd numbers and the number of even numbers in the array.
+Ques-03 Write a C++ program that takes an array as input and prints the sum of odd numbers and the sum of even numbers separately.
 
 Sample Input:
 Enter the size of the array: 5
-Enter the array elements: 5 10 15 20 25
+Enter the array: 5 10 15 20 25
 
 Sample Output:
-Number of odd numbers: 3
-Number of even numbers: 2
+Sum of odd numbers: 45
+Sum of even numbers: 30
 
 */
 
@@ -29,10 +28,10 @@ int main() {
     int odd =0;
     for (int i:a){
         if(i%2==0){
-            even+=1;
+            even+=i;
         }
         else{
-            odd+=1;
+            odd+=i;
         }
     } 
         
