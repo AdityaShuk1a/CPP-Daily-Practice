@@ -6,6 +6,17 @@ class onlyhub{
         int id;
         string name;
         int fans;
+        onlyhub (int i, string s, int f){
+            id = i;
+            name = s;
+            fans = f;
+        }
+        ~onlyhub(){
+            cout << "gaya bye bye" << endl;
+        }
+        void calling(){
+            cout << " "<< id << " "<< name << " " << fans;
+        }
 };
 
 class student{
@@ -15,10 +26,11 @@ class student{
         int age;
 };
 int main (){
-    onlyhub p1;
-    p1.id = 100;
-    p1.name = "Dani Didi";
-    p1.fans = INT_MAX;
+    onlyhub p1(100,"Dani DIDI", INT_MAX);
+    // p1.id = 100;
+    // p1.name = "Dani Didi";
+    // p1.fans = INT_MAX;
+    p1.calling();
 
     student s1;
     student s2;
