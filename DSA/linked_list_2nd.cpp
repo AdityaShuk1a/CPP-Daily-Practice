@@ -83,6 +83,14 @@ using namespace std;
 //     return 0;
 // }
 
+class account {
+    private:
+        int accountId;
+    public:
+        
+};
+
+
 
 class Node{
     public:
@@ -105,6 +113,7 @@ void insert(Node* &head, int val){
     Node* temp = head;
     while (temp->next!=NULL){
         temp = temp->next;
+        // temp->prev = temp;
     }
     temp->next = n;
 }
@@ -123,7 +132,16 @@ void print(Node* &head){
 int main (){
     Node* head = NULL;
     insert(head, 1);
+    // *head = NULL;
+    // Node* head = NULL;
     insert(head, 3);
+    // *head = NULL;
     insert(head, 4);
     print(head);
+
+    // int a  = 6;
+    // int *ptr = &a;
+    // int &b = a;
+    // cout << b << endl;
+    // cout << *ptr << " " << a;
 }

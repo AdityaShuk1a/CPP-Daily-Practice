@@ -13,6 +13,14 @@ class Node{
         }
 };
 
+void insertAtHead(Node* &head, int val){
+
+    Node* n = new Node(val);
+
+    n->next = head;
+    head = n;
+}
+
 void insertAtTail(Node* &head, int val){
     //create a new node in which data feild will have val and next pointer will be NULL
     Node* n = new Node(val);
@@ -50,6 +58,11 @@ int main (){
 
     Node* head = NULL;
     insertAtTail(head, 1);
+    insertAtTail(head, 2);
+    insertAtTail(head, 3);
+    insertAtTail(head, 4);
+
+    insertAtHead(head, 7);
     
 
     display(head);
