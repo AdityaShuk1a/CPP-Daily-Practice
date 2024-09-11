@@ -3,9 +3,9 @@
 using namespace std;
 
 int main(){
-    vector <int> unique;
+    
     vector <int> arr1;
-    vector <int> arr2;
+    
 
     int n,m;
     cin >> n >> m;
