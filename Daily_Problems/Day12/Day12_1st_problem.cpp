@@ -1,10 +1,20 @@
 #include <bits/stdc++.h>
+
 using namespace std;
 
 int main() {
     vector<int> a = {-4, -2, 1, 5, -3, 7, -5};
     vector<int> aa;
     vector<int> temp;
+
+    sort(a.begin(),a.end());
+    auto f = find(a.begin(), a.end(), 1);
+    cout << distance(a.begin(),f) << "   " << *f <<  endl;
+    // cout << *max << endl;
+    for (int i : a) {
+        cout << i << " ";
+    }
+    // cout << max_sum << endl;
 
     int max_sum = INT_MIN;
     int sum = 0;
@@ -22,10 +32,6 @@ int main() {
         }
     }
 
-    for (int i : aa) {
-        cout << i << " ";
-    }
-    cout << max_sum << endl;
 
     return 0;
 }
