@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void merge(int *arr, int s, int e) {
+void merge(int *arr, int s, int e) { 
     int mid = (s + e) / 2;
     int len1 = mid - s + 1;
     int len2 = e - mid;
