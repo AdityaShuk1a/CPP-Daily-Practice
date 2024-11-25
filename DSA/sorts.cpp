@@ -89,14 +89,33 @@ void quickie(vector <int> & arr, int l, int r){
     quickie(arr, p+1, r);
 
 }
+void bubbleSort(vector<int>&arr){
+    for(int i = 0; i<arr.size(); i++){
+        for(int j = 0; j<arr.size()-1-i; j++){
+            if(arr[j] > arr[j+1]){
+                swap(arr[j],arr[j+1]);
+            }
+        }
+    }
+}
 
+void toh(int n, char from , char to, char extra){
+    if(n>0){
+        toh(n-1, from, extra, to);
+        cout << "number of disk " << n << " from " << from << " to " << to << endl;
+        toh(n-1, extra, to, from);
+
+    }
+}
 int main()
 {
     vector <int> arr = {4,2,3,5,7,7,3,2,4,6,7,3,3,5,7,78,9,1}; 
     // mergeSort(arr, 0, arr.size()-1);
-    quickie(arr, 0, arr.size()-1);
+    bubbleSort(arr);
     for(int i: arr){
         cout << i << " ";
-    }   
+    }  
+    cout << endl;
+    toh(3, 'a', 'c', 'b'); 
     return 0;
 }
