@@ -1,52 +1,39 @@
+// You are using GCC
 #include <bits/stdc++.h>
-
 using namespace std;
 
-// int main()
-// {
-//     stack <string> a;
-//     string s = " ";
-//     while (s!="-1"){
-//         cin >> s;
-//         a.push(s);
-//     }
-//     while(!a.empty()){
-//         cout << a.top() << " " ;
-//         a.pop();
-//     }
-//     return 0;
-// }
 
-
-void insertBottom(stack <int>& a){
-    if(a.empty()){  
-        int c;
-        cin >>c;
-        a.push(c);
-        return;
+void q(vector <int>& h, int s, vector <int> a){
+    for(int i  = 0; i< a.size(); i++){
+        int k = a[i];
+        int ind = k%s;
+        int j  = 0;
+        while(h[(ind+j*j)%s] !=-1){
+            j++;
+        }
+        h[(ind+j*j)%s] = k;
     }
-    int num = a.top();
-    a.pop();
+}
+
+int main(){
+    int n;
+    cin >> n;
+    vector <int> arr(n);
+    for(int i = 0;i <n; i++){
+        cin >> arr[i];
+    }
     
-    insertBottom(a);
-    a.push(num);
-
-}
-
-int main()
-{
-    stack <int> a;
-    a.push(1);
-    a.push(2);
-    a.push(3);
-    a.push(4);
-    a.push(5);
-    insertBottom(a);
-    while(!a.empty()){
-        cout << a.top() << " ";
-        a.pop();
+    int s;
+    cin >> s;
+    
+    vector <int> h(s,-1);
+    
+    q(h, s, arr);
+    
+    for(int i = 0; i<s; i++){
+        if(h[i]!=-1){
+            cout << h[i] << " ";
+        }
     }
-    return 0;
+    
 }
-
-
